@@ -20,3 +20,23 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#drawingBoard {
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+    #controls button {
+        margin-right: 10px;
+    }
+
+#sizeControls {
+    margin-top: 20px;
+}
+
+    #sizeControls label {
+        margin-right: 10px;

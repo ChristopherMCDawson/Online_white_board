@@ -2,7 +2,21 @@
     ViewData["Title"] = "Home Page";
 }
 
+<div id="controls">
+    <button id="pencilBtn">Pencil</button>
+    <button id="brushBtn">Brush</button>
+    <button id="fillBtn">Fill</button>
+    <input type="color" id="colorPicker" value="#000000">
+    <button id="eraserBtn">Eraser</button>
+    <button id="clearBtn">Clear</button>
+</div>
+
+<div id="sizeControls">
+    <label for="sizeRange">Size:</label>
+    <input type="range" id="sizeRange" min="1" max="100" value="5">
+</div>
+
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <canvas id="drawingBoard" width="900" height="800"></canvas>
 </div>
