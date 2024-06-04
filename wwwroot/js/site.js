@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const clearBtn = document.getElementById('clearBtn');
     const sizeRange = document.getElementById('sizeRange');
     const downloadBtn = document.getElementById('downloadBtn');
+    const saveBtn = document.getElementById('saveBtn');
+    const loadBtn = document.getElementById('loadBtn');
+ 
 
     let isDrawing = false;
     let isErasing = false;
@@ -66,12 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
     sizeRange.addEventListener('input', () => {
         ctx.lineWidth = sizeRange.value;
     });
-
-
-    // Function to download the canvas image
+     // Function to download the canvas image
     function downloadImage() {
+        const filename = prompt("Enter filename:") || "canvas_image";
         const link = document.createElement('a');
-        link.download = 'canvas_image.png';
+        link.download = `${ filename }.png`;
         link.href = canvas.toDataURL();
         link.click();
     }
