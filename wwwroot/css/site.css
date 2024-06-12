@@ -36,7 +36,7 @@ body {
 #drawingBoard {
     position: absolute;
     border: 1px solid #000;
-    background-color: white; /* Change background color to white */
+    background-color: white;
     top: 0;
     left: 0;
     top: 50%;
