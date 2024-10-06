@@ -8,54 +8,154 @@ html {
     }
 }
 
-.btn:focus,
-.btn:active:focus,
-.btn-link.nav-link:focus,
-.form-control:focus,
-.form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
 body {
-    margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    position: relative;
 }
 
 #canvasContainer {
     position: relative;
-    width: 1280px;
-    height: 1000px;
-    background-color: teal;
-    background-size: cover;
+    width: 1080px;
+    height: 800px;
+    margin-top: 20px;
 }
 
 #drawingBoard {
-    position: absolute;
     border: 1px solid #000;
-    background-color: white;
-    top: 0;
-    left: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: #fff;
 }
 
+/* Circular button layout */
 #controls {
+    position: relative;
+    width: 200px;
+    height: 200px;
     margin-top: 20px;
 }
 
-    #controls button {
-        margin-right: 10px;
+    #controls button, #controls input[type="color"] {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: #258cfb;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        text-align: center;
+        line-height: 60px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
     }
 
+        #controls button:hover, #controls input[type="color"]:hover {
+            background-color: #1d74d0;
+        }
+
+    #controls #pencilBtn {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #controls #brushBtn {
+        top: 30%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    #controls input[type="color"] {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border: none;
+        height: 50px;
+        width: 50px;
+    }
+
+    #controls #eraserBtn {
+        top: 55%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    #controls #clearBtn {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #controls #downloadBtn {
+        top: 10%;
+        right: 2%;
+        transform: translate(-20%, -10%);
+    }
+
+
+#shapeControls {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-top: -150px;
+    right: -50%;
+}
+
+    #shapeControls button {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        text-align: center;
+        line-height: 60px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+        #shapeControls button:hover {
+            background-color: #d32f2f;
+        }
+
+    #shapeControls #drawRectangleBtn {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #shapeControls #drawCircleBtn {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    #shapeControls #drawLineBtn {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    #stampControls #stampControls{
+        top: 50%;
+        left: 0;
+
+    }
 #sizeControls {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
     #sizeControls label {
         margin-right: 10px;
     }
+
+#sizeRange {
+    width: 100px;
+}

@@ -1,38 +1,32 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Whiteboard";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Whiteboard</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div id="controls">
-        <button id="pencilBtn">Pencil</button>
-        <button id="brushBtn">Brush</button>
-        <button id="eraserBtn">Eraser</button>
-        <input type="color" id="colorPicker" value="#000000">
-        <button id="clearBtn">Clear</button>
-        <button id="downloadBtn">Download</button>
-        <button id="textBoxBtn">Add Text Box</button>
-        <button id="saveFileBtn">Save to File</button>
-        <button id="loadFileBtn">Load from File</button>
 
-    </div>
-    <div id="sizeControls">
-        <label for="sizeRange">Size:</label>
-        <input type="range" id="sizeRange" min="1" max="50" value="5">
-    </div>
-    <div id="canvasContainer">
-        <div class="text-center">
-            <div id="drawingBoard"></div>
-        </div>
-    </div>
-    <input type="file" id="fileInput" style="display: none;" />
-    <script src="https://cdn.jsdelivr.net/npm/konva@latest/konva.min.js"></script>
-    <script src="js/scripts.js"></script>
-</body>
-</html>
+<div id="controls">
+    <button id="pencilBtn">Pencil</button>
+    <button id="brushBtn">Brush</button>
+    <input type="color" id="colorPicker" value="#000000">
+    <button id="eraserBtn">Eraser</button>
+    <button id="clearBtn">Clear</button>
+    <button id="downloadBtn">Download</button>
+</div>
+
+<div id="shapeControls">
+    <button id="drawRectangleBtn">Rectangle</button>
+    <button id="drawCircleBtn">Circle</button>
+    <button id="drawLineBtn">Line</button>
+    <button id="emojiBtn">Stamp</button>
+</div>
+
+<div id="sizeControls">
+    <label for="sizeRange">Brush Size:</label>
+    <input type="range" id="sizeRange" min="1" max="100" value="5">
+</div>
+
+<div id="canvasContainer">
+    <canvas id="drawingBoard" width="1080" height="900"></canvas>
+</div>
+
+@section Scripts {
+    <script src="~/js/site.js"></script>
+}
